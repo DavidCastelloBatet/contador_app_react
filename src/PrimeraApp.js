@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 
-const PrimeraApp = ( { saludo2 } ) => {
+const PrimeraApp = ( { saludo2, subtitulo } ) => {
   const nombre = 'David'
   const numeros = [1,2,3,4,5]
   const saludo = {
@@ -16,6 +16,7 @@ const PrimeraApp = ( { saludo2 } ) => {
       <h3>Componente: { numeros }</h3>
       <p>lorem { saludo.nombre }</p>
       <p>desde props: { saludo2 }</p>
+      <p>por defecto: { subtitulo }</p>
     </>
   )
 }
@@ -26,6 +27,11 @@ PrimeraApp.propTypes = {
   //saludo2: PropTypes.string,
   // Con el .isRequired hacemos que la prop sea obligatoria
   saludo2: PropTypes.string.isRequired,
+  
+}
+// como poner defaultProps, (props por defecto).
+PrimeraApp.defaultProps = {
+  subtitulo: 'PropTypes por default',
 }
 
 export default PrimeraApp;
