@@ -1,5 +1,4 @@
 //import { Fragment } from "react";
-import PropTypes from 'prop-types';
 
 
 const PrimeraApp = ( { saludo2, subtitulo } ) => {
